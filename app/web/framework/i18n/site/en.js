@@ -1,7 +1,6 @@
 export default {
   menu: {
     home: 'Home',
-    category: 'Catetory',
     about: 'About',
   },
   lang: {

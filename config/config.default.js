@@ -48,5 +48,8 @@ module.exports = app => {
     },
   };
 
+  exports.notfound = {
+  };
+
   return exports;
 };

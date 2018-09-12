@@ -26,6 +26,6 @@
 </style>
 <script type='babel'>
   export default{
-    
+
   };
 </script>

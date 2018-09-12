@@ -5,29 +5,30 @@
      </div>
   </layout>
 </template>
+
 <style>
   @import 'about.css';
 </style>
+
 <script type='babel'>
-  
+
   export default {
     components: {
 
     },
     data(){
       return {
-        
+
       }
     },
     computed: {
-      
+
     },
     methods: {
-     
+
     },
     mounted() {
-    
+
     }
   }
 </script>
-

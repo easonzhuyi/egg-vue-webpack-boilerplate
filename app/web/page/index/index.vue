@@ -5,12 +5,11 @@
         <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
           <div class="post-preview">
               <a :href="item.url">
-                  <h2 class="post-title">            
+                  <h2 class="post-title">
                       <a :href="item.url" target="_blank" style="font-size: 26px;">{{item.title}}</a>
                   </h2>
                   <div class="post-content-preview">{{item.summary}}</div>
               </a>
-              <p class="post-meta">Posted by hubcarl on 17-09-24</p>
           </div>
           <hr>
         </div>
@@ -44,16 +43,16 @@
     },
     methods: {
       fetch(){
-        this.$http.get(`${location.origin}/list?pageIndex=${this.pageIndex}&pageSize=${this.pageSize}`).then(res=> {
-          console.log('res', res);
-          if(res.data.list && res.data.list.length){
-            this.total = res.data.total;
-            this.list = this.list.concat(res.data.list);
-          }else{
-            this.isFinish = true;
-          }
-          this.isLoading = false;
-        });
+        // this.$http.get(`${location.origin}/list?pageIndex=${this.pageIndex}&pageSize=${this.pageSize}`).then(res=> {
+        //   console.log('res', res);
+        //   if(res.data.list && res.data.list.length){
+        //     this.total = res.data.total;
+        //     this.list = this.list.concat(res.data.list);
+        //   }else{
+        //     this.isFinish = true;
+        //   }
+        //   this.isLoading = false;
+        // });
       },
       loadPage(){
         if (!this.isFinish && !this.isLoading) {
@@ -72,4 +71,3 @@
     }
   }
 </script>
-
