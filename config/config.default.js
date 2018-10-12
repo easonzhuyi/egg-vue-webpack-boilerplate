@@ -36,16 +36,25 @@ module.exports = app => {
     'access'
   ];
 
-  exports.security = {
-    csrf: {
-      ignoreJSON: false,
-      cookieName: 'csrfToken',
-      sessionName: 'csrfToken',
-      headerName: 'x-csrf-token'
-    },
-    xframe: {
-      enable: false,
-    },
+  // exports.security = {
+  //   csrf: {
+  //     ignoreJSON: false,
+  //     cookieName: 'csrfToken',
+  //     sessionName: 'csrfToken',
+  //     headerName: 'x-csrf-token'
+  //   },
+  //   xframe: {
+  //     enable: false,
+  //   },
+  // };
+
+  exports.httpProxy = {
+    '/api': {
+      target: 'https://young-uat.juntianbroker.com',
+      pathRewrite: {
+       '^/api' : '' // eslint-disable-line
+      }
+    }
   };
 
   exports.notfound = {

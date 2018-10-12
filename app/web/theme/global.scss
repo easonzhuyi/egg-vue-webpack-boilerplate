@@ -1,0 +1,10 @@
+@import "~theme/sprites/sprite.scss";
+
+html,body{
+  height: 100%;
+  width: 100%;
+}
+#app{
+  height: 100%;
+}
+@include sprites($spritesheet-sprites);

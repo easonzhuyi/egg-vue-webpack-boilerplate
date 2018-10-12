@@ -1,4 +1,5 @@
 'use strict';
+const { SkeletonPlugin } = require('page-skeleton-webpack-plugin');
 module.exports = {
   egg: true,
   framework: 'vue',
@@ -15,13 +16,23 @@ module.exports = {
     client: 'app/web/framework/vue/entry/client.js',
     asset: 'app/web/asset',
     component: 'app/web/component',
+    theme: 'app/web/theme',
     framework: 'app/web/framework',
     store: 'app/web/store',
     vue: 'vue/dist/vue.esm.js'
   },
   dll: ['vue', 'axios', 'vue-router', 'vuex', 'vuex-router-sync'],
   loaders: {
-    scss: true
+    scss: true,
+    vue: {
+      exclude: []
+    }
+  },
+  plugins: {
+    skeleton: {
+      env: ['dev'], // 开发环境启用
+      name: ''
+    }
   },
   node: {
     console: true

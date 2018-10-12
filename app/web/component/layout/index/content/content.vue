@@ -1,11 +1,9 @@
 <template>
-  <div>
+  <div class="hh-content-container">
     <slot name='content'></slot>
   </div>
 </template>
-<style>
-  @import 'content.css';
-</style>
+
 <script type='babel'>
   export default {
     name:'v-content',
@@ -18,5 +16,14 @@
     mounted() {
 
     }
-  };
+  }
 </script>
+
+<style lang="scss">
+@import "~theme/colors.scss";
+.hh-content-container{
+  min-height: 800px;
+  height: 100%;
+  background-color: $white;
+}
+</style>

@@ -4,37 +4,13 @@
 
 ## 系统功能
 
-### 前台博客系统 http://localhost:7001
+### pc电商系统 http://localhost:7001
 
 **采用 Egg + Vue 服务端渲染**
 
-![](https://github.com/hubcarl/egg-typescript-element-kit/blob/master/docs/images/home.png)
-
-- 博客首页
-- 博客文章列表展示
-- 博客文章详情页面
-- 博客分类浏览
-
-### 后台管理系统 http://localhost:7001/admin
-
 **采用 Egg + Vue + Vue-Router + Element 单页面服务端同构渲染**
 
-![](https://github.com/hubcarl/egg-typescript-element-kit/blob/master/docs/images/admin.png)
-
-- 用户登陆
-- 用户注册
-- Dashboard
-- 文章管理
-- Markdown添加文章 
-- 权限管理
-
 ## 纯净版
-
-因该项目包含了多种实现, 提供多种例子实现，为防干扰, 特提供了两个纯净版本分支用于实际项目开发, 请自行选用。
-
-- Egg2 + Vue2 + Axios 多页面服务端渲染分支 [feature/green/multi](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/green/multi)
-- Egg2 + Vue2 + vue-router + vuex + axios 单页面服务端渲染分支 [feature/green/spa](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/feature/green/spa)
-
 
 ## 版本
 
@@ -42,16 +18,6 @@
 - Node 版本: Node ^8.x.x+,  Node 6.x.x 版本请见 [Egg 1.0 + Node6分支](https://github.com/hubcarl/egg-vue-webpack-boilerplate/tree/node6)
 - Webpack 版本: ^4.x.x, 对应 `easywebpack-vue` 版本为 ^4.x.x; Webpack3 版本项目骨架请见 `webpack3` 分支, 对应 `easywebpack-react` 版本为 3.x.x
 - Vue 版本: ^2.5.0
-
-## 说明 
-
-- Egg + TypeScript 已初步支持， 包括 Node 端 typescript 编写 和 前端 TypeScript编写, 具体请见(https://github.com/hubcarl/egg-vue-typescript-boilerplate)项目
-- 项目开发之前, 请阅读[Egg + Vue 服务端渲染开发指南](https://zhuanlan.zhihu.com/p/30445536) 和 [Egg + Vue 服务端渲染工程化实现](https://zhuanlan.zhihu.com/p/29838551)
-- 版本变更情况请看发布版本说明[RELEASE](RELEASE.md) 
-- 如果你需要了解 Egg+Vue+Webpack 项目更多信息，请扫以下二维码加好友，请备注：Node.js
-- 骨架功能性需求或者Bug问题, 欢迎大家 PR 完善
-
-![hubcarl](https://avatars3.githubusercontent.com/u/4983042?v=4&u=0befb64a57a7911c630b7f97df5632385b08da2a&s=250)
 
 ## 文档
 
@@ -122,7 +88,7 @@ npm run dev
 
 应用访问: http://127.0.0.1:7001
 
-![npm start启动](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/docs/images/webpack-build.png)
+![npm start启动]
 
 
 #### 3.4 发布模式启动应用
@@ -140,7 +106,6 @@ npm start
 ```
 
 
-详细打包部署请见： http://hubcarl.github.io/easywebpack/vue/dev/
 
 ## 4. 配置说明(支持三种方式)
 
@@ -426,40 +391,5 @@ exports.index = function* (ctx) {
   app.get('/app(/.+)?', app.controller.app.app.index);
 ```
 
-
-## 7. 工程实例
-
-
-- 基于vue + axios 多页面服务器客户端同构入口: http://127.0.0.1:7001
-
-![多页面服务器渲染](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/docs/images/vue-mutil-page.png)
-
-
-- 基于vue + vuex + vue-router + axios 单页面服务器客户端同构入口: http://127.0.0.1:7001/app
-
-![单页面服务器](https://github.com/hubcarl/egg-vue-webpack-boilerplate/blob/master/docs/images/vue-single-page.png)
-
-
-## 8. 实现原理
-
-### 8.1 本地`npm start`启动流程
-
-![本地启动流程](http://hubcarl.github.io/img/webpack/npm-start.png)
-
-### 8.2 服务端渲染页面访问流程
-
-![服务端渲染页面访问流程](http://hubcarl.github.io/img/webpack/egg-webpack-vue-ssr.png)
-
-
-### 8.3 详细资料
-
-- [Egg+Vue解决方案开发流程](http://hubcarl.github.io/easywebpack/vue/dev/)
-
-- [基于webpack的前端工程解决方案和egg+vue服务端渲染项目实践](http://hubcarl.github.io/blog/2017/04/15/webpack-project/)
-
-- [koa和egg项目webpack内存编译和热更新实现](http://hubcarl.github.io/blog/2017/04/15/egg-webpack/)
-
-
 ## License
 
-[MIT](LICENSE)
